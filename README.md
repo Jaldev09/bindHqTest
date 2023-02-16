@@ -1,7 +1,7 @@
 # BindHq test project Symfony.
 
 ## Installation Steps (commands) :
-- clone this repository using `git clone https://github.com/hardikt093/bindHqTest.git`.
+- clone this repository using `git clone https://github.com/Jaldev09/bindHqTest.git`.
 - `cd bindHqTest`
 - `composer install`
 - Set Database configuration in .env file.
