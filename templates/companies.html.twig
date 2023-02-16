@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container mt-5">
+
+  {% if company.error %}
+    <h1>{{company.message}}</h1>
+  {% else %}
+
+  <h1 class="mb-3">{{title}}</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Company</th>
+        <th scope="col">Sales</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for c in company.data %}
+      <tr>
+        <th scope="row"><a href="{{path('app_company', {id: c.id})}}" >{{c.company_name}}</a></th>
+        <td>{{c.sales}}</td>
+        <td>${{c.amount}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</div>
+{% endblock %}
+
